@@ -1,7 +1,13 @@
-# Compiled class file
-*.class
-
-# Log file
+.out
+.idea/
+.gradle/
+.compile/
+build/
+/src/main/java/META-INF
+build.log
+*.iml
+*.ipr
+*.iws
 *.log
 
 # BlueJ files
