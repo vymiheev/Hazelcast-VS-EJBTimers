@@ -2,20 +2,15 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'findbugs'
 
-project.ext.localRepo = new File(project.projectDir, 'src/lib').absolutePath
-project.ext.grfcRepo = new File(project(':grfc.common').projectDir, 'src/lib').absolutePath
 repositories {
-    flatDir name: project.name + 'LocalRepo', dirs: [project.localRepo, project.grfcRepo]
+	mavenCentral()
 }
 
 project.ext {
-    hazelcast = [':hazelcast-3.8.6:']
-    test = ['junit:junit-4.11:', 'mockito:mockito-all-1.9.5:']
-    logs = ['log4j:log4j-1.2.17:', ':commons-logging-1.1.3:', ':slf4j-api-1.7.6:', ':slf4j-log4j12-1.7.6:']
-    commons = [
-            ':commons-lang-2.4:', ':commons-lang3-3.2.1:', ':commons-codec-1.9:', ':commons-beanutils-1.9.2:',
-            ':commons-collections-3.2.1:', ':commons-io-2.4:', ':commons-fileupload-1.3.1:', ':concurrentlinkedhashmap-lru-1.4.2:',
-            ':cache-api-1.0.0:']
+    hazelcast = ['com.hazelcast:hazelcast:3.9.2']
+    test = ['junit:junit:4.11:', 'org.mockito:mockito-all:1.9.5:']
+    logs = ['log4j:log4j:1.2.17']
+    commons = ['org.apache.commons:commons-lang3:3.2.1', 'commons-collections:commons-collections:3.2.1', 'commons-io:commons-io:2.4:', 'javax.cache:cache-api:1.0.0']
 }
 
 dependencies {
