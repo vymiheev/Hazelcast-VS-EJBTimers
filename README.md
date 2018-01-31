@@ -20,12 +20,16 @@ timer would not be rollbacked and continue running.
                                                   USE CASES
 --------------------------------------------------------------------------------------
 Example of initialization Hazelcast:
-NetworkConfiguration networkConfiguration = fetchNetConfiguration(); //Fetch cluster nodes relations and other info 
-ILocalServiceResolver serviceRouter = new ClusterServiceRouter();
-ClusterService clusterService = new ClusterService(serviceRouter);
+
+Fetch cluster nodes relations and other info
+NetworkConfiguration networkConfiguration = fetchNetConfiguration()
+
+Implement new ILocalServiceResolver
+ILocalServiceResolver serviceRouter = new ...
+ClusterService clusterService = new ClusterService(serviceRouter)
 clusterService.init(networkConfiguration); 
 
 --------------------------------------------------------------------------------------
-ClusterService class wraps some Hazelcast logic for distributed computing and release method
+ClusterService class wraps some Hazelcast logic for distributed computing and include method
 IClusterService.getClusterTimerManager() that return Object of type IClusterTimerManager to manage timers.
 
