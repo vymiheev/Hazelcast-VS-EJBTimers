@@ -1,4 +1,4 @@
-# Hazelcast-VS-EJBTimers
+# Hazelcast-clustered-timers
 The main goal of this project is to cluster EJB timers with Hazelcast 
 and gather common server resources together to from clustered Singleton. 
 Also this solution can work with any delayed future tasks ('timers') and not only in EJB container.
