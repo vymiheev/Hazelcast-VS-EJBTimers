@@ -25,8 +25,11 @@ Fetch cluster nodes relations and other info
 NetworkConfiguration networkConfiguration = fetchNetConfiguration()
 
 Implement new ILocalServiceResolver
+
 ILocalServiceResolver serviceRouter = new ...
+
 ClusterService clusterService = new ClusterService(serviceRouter)
+
 clusterService.init(networkConfiguration); 
 
 --------------------------------------------------------------------------------------
