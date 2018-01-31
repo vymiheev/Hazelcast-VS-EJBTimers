@@ -22,6 +22,7 @@ timer would not be rollbacked and continue running.
 Example of initialization Hazelcast:
 
 Fetch cluster nodes relations and other info
+
 NetworkConfiguration networkConfiguration = fetchNetConfiguration()
 
 Implement new ILocalServiceResolver
